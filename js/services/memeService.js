@@ -10,7 +10,7 @@ var gMeme = {
     selectedLineIdx: 0,
     lines: [
         {
-            txt: 'I sometimes eat Falafel',
+            txt: 'When you think you\'ve be',
             size: 40,
             color: 'red'
         }
@@ -38,5 +38,18 @@ function setImg(elImg) {
 // }
 
 function setLineTxt(memeLine) {
-    gMeme.lines[0].txt = memeLine
+    gMeme.lines[gMeme.selectedLineIdx].txt = memeLine
+}
+
+function setColor(lineColor) {
+    gMeme.lines[gMeme.selectedLineIdx].color = lineColor
+}
+
+function changeSize(diff) {
+    gMeme.lines[gMeme.selectedLineIdx].size += diff
+}
+
+function switchLine() {
+    (gMeme.selectedLineIdx === 0) ? gMeme.selectedLineIdx = 1 : gMeme.selectedLineIdx = 0
+    console.log('lineIdx', gMeme.selectedLineIdx)
 }

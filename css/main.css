@@ -1,8 +1,8 @@
 * {
     box-sizing: border-box;
 
-    /* text-align: center; */
-    /* margin: auto; */
+    text-align: center;
+    margin: 3px auto;
 }
 
 .hidden {
@@ -17,4 +17,8 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+canvas {
+    display: block;
 }

@@ -27,3 +27,10 @@ function setElHtml(selector, html) {
 function navigateToPage(page) {
     window.location = `${page}.html`
 }
+
+function onDownloadCanvas(elLink) {
+    const dataUrl = gCanvas.toDataURL()
+    elLink.href = dataUrl
+    elLink.download = 'my-img'
+  }
+  

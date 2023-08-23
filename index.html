@@ -17,12 +17,25 @@
         </ul>
     </section>
 
-    
+
     <section class="editor-container hidden">
         <div>editor</div>
         <input type="text" class="set-line" oninput="onSetLineTxt(this.value)" placeholder="Set meme line..">
+        <input type="color" class="set-color" oninput="onSetColor(this.value)">
+
+        <div class="font-size">
+            <button class="decrease" title="decrease-size" onclick="onChangeSize(-3)">-</button>
+
+            <button class="increase" title="increase-size" onclick="onChangeSize(3)">+</button>
+        </div>
+        
+        <button class="add-line" title="add-line" onclick="onAddLine()">add-line</button>
+        <button class="switch-line" title="switch-line" onclick="onSwitchLine()">switch-line</button>
+
 
         <canvas width="500" height="500"></canvas>
+
+        <a href="#" onclick="onDownloadCanvas(this)">Download</a>
     </section>
 
     <script src="js/services/util.service.js"></script>

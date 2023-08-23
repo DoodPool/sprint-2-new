@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+
+    /* text-align: center; */
+    /* margin: auto; */
+}
+
+.hidden {
+    display: none;
+}
+
+.set-line {
+    display: block;
+}
+
+.clean-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}

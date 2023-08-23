@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme-Gen</title>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body onload="onInit()">
+    <h1>Meme-Gen</h1>
+
+
+    <section class="gallery-container">
+        <ul class="gallery-imgs clean-list">
+        </ul>
+    </section>
+
+    
+    <section class="editor-container hidden">
+        <div>editor</div>
+        <input type="text" class="set-line" oninput="onSetLineTxt(this.value)" placeholder="Set meme line..">
+
+        <canvas width="500" height="500"></canvas>
+    </section>
+
+    <script src="js/services/util.service.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/controllers/memeController.js"></script>
+    <script src="js/services/memeService.js"></script>
+    <script src="js/controllers/galleryController.js"></script>
+
+</body>
+
+</html>

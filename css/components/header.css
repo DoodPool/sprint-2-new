@@ -1,7 +1,37 @@
 .main-header {
+    display: grid;
+    grid-auto-flow: column;
+
+    align-items: center;
+
     width: 90vw;
     height: 60px;
-    border-radius: 37px;
-    /* background-color: #5970c1-blue;| */
+    border-radius: 35px;
+    
     background: linear-gradient(to right, #5970c1, #21ac91);
+}
+
+.logo {
+    font-size: 2em;
+    letter-spacing: -0.02em;
+    justify-self: start;
+    margin-inline-start: 20px;
+}
+
+.gallery-btn {
+    font-size: 1.2em;
+    border: none;
+    background-color: inherit;
+    color: white;
+
+    cursor: pointer;
+    transition: .1s;
+}
+
+.inPage {
+    background-color: white;
+    color: #21ac91;
+    border-radius: 35px;
+    padding: 3px 17px;
+    box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.15);
 }

@@ -7,10 +7,9 @@
 @import url("basics/helpers.css");
 
 /* COMPONENTS */
-/* @import url("components/logo.css"); */
 @import url("components/header.css");
 @import url("components/gallery-container.css");
-/* @import url("components/editor-container.css"); */
+@import url("components/editor-container.css");
 /* @import url("components/footer.css"); */
 
 /* MEDIA QUERIES */

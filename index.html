@@ -11,7 +11,9 @@
 <body onload="onInit()">
 
     <header class="main-header">
-        <h1>Meme-Gen</h1>
+        <h1 class="logo">Meme-Gen</h1>
+        <button class="btn gallery-btn inPage" onclick="onGallery()">Gallery</button>
+        <!-- <button class="btn gallery-btn">About</button> -->
     </header>
 
     <section class="gallery-container">
@@ -20,23 +22,28 @@
     </section>
 
     <section class="editor-container hidden">
-        <div>editor</div>
-        <input type="text" class="set-line" oninput="onSetLineTxt(this.value)" placeholder="Set meme line..">
-        <input type="color" class="set-color" oninput="onSetColor(this.value)">
-
-        <div class="font-size">
-            <button class="decrease" title="decrease-size" onclick="onChangeSize(-3)">-</button>
-
-            <button class="increase" title="increase-size" onclick="onChangeSize(3)">+</button>
-        </div>
-        
-        <button class="add-line" title="add-line" onclick="onAddLine()">add-line</button>
-        <button class="switch-line" title="switch-line" onclick="onSwitchLine()">switch-line</button>
-        <button class="back-btn" title="go-back" onclick="onBack()">Back</button>
 
         <canvas width="500" height="500" onclick="onMouseMove(event)"></canvas>
+        
+        <div class="tools-container grid">
+            <input type="text" class="set-line" oninput="onSetLineTxt(this.value)" placeholder="Set meme line..">
 
-        <a href="#" onclick="onDownloadCanvas(this)">Download</a>
+            <div class="tools grid">
+                <input class="set-color" type="color" class="set-color" oninput="onSetColor(this.value)">
+                <div class="font-size">
+                    <button class="btn decrease" title="decrease-size" onclick="onChangeSize(-3)">-</button>
+                    
+                    <button class="btn increase" title="increase-size" onclick="onChangeSize(3)">+</button>
+                </div>
+                
+                <button class="btn add-line" title="add-line" onclick="onAddLine()">add-line</button>
+                <button class="btn switch-line" title="switch-line" onclick="onSwitchLine()">switch-line</button>
+            </div>
+
+            
+            <a class="download" href="#" onclick="onDownloadCanvas(this)">download</a>
+        </div>
+        
     </section>
 
     <script src="js/services/util.service.js"></script>

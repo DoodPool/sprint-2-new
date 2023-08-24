@@ -1,0 +1,87 @@
+.editor-container {
+    grid-auto-flow: column;
+    margin-block-start: 20px;
+}
+
+.tools-container {
+    grid-template-columns: minmax(100px, 170px) minmax(100px, 170px) minmax(100px, 170px);
+    background-color: #383b42;
+    border-radius: 20px;
+    
+}
+
+.tools {
+    grid-column: 1/-1;
+    grid-template-columns: minmax(130px, 200px) minmax(130px, 200px);
+    grid-auto-flow: row;
+
+    align-items: center;
+
+    border-radius: 35px;
+    background-color: #19a59f;
+}
+
+
+.set-line {
+    grid-column: 1/-1;
+    /* width: 400px; */
+    padding: 20px 130px;
+    align-self: center;
+
+    box-shadow: 1px 5px 0 #bbc4d1, inset 0 5px 0 #ffffff;
+    background-color: #ebeef3;
+    border: none;
+
+    border-radius: 35px;
+}
+
+.download {
+    grid-column: 1/-1;
+    padding: 20px 130px;
+    align-self: center;
+
+    border-radius: 15px;
+    box-shadow: 1px 6px 0 #632687, inset 0 5px 0 #9b55c3;
+    background-color: #8f44bb;
+
+}
+
+canvas {
+    border-radius: 20px;
+}
+
+
+.increase,
+.decrease {
+    width: 40px;
+    height: 40px;
+    box-shadow: 1px 3px 0 rgba(92, 92, 92, 0.55), inset 0 5px 0 rgba(255, 255, 255, 0.58);
+    border-radius: 10px;
+    background-color: #ffffff;
+
+    font-size: 1.3em;
+}
+
+.add-line,
+.switch-line{
+    /* width: 120px; */
+    height: 30px;
+    box-shadow: 1px 4px 0 rgba(92, 92, 92, 0.55), inset 0 5px 0 rgba(255, 255, 255, 0.58);
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 0px 15px;
+    
+    font-size: 1.2em;
+}
+
+.set-color {
+    width: 60px;
+    height: 30px;
+    padding: 3.5px;
+
+    box-shadow: 1px 4px 0 rgba(92, 92, 92, 0.55), inset 0 5px 0 rgba(255, 255, 255, 0.58);
+    border-radius: 10px;
+
+    font-size: 1.2em;
+
+}

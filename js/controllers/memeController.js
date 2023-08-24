@@ -61,12 +61,16 @@ function onImgSelect(elImg) {
     setImg(elImg)
     renderMeme()
     handleClassEl('hidden', '.editor-container', false)
+    handleClassEl('flex', '.editor-container', true)
     handleClassEl('hidden', '.gallery-container', true)
+    handleClassEl('inPage', '.gallery-btn', false)
 }
 
-function onBack() {
+function onGallery() {
     handleClassEl('hidden', '.editor-container', true)
+    handleClassEl('flex', '.editor-container', false)
     handleClassEl('hidden', '.gallery-container', false)
+    handleClassEl('inPage', '.gallery-btn', true)
 }
 
 function onChangeSize(diff) {

@@ -9,14 +9,15 @@
 </head>
 
 <body onload="onInit()">
-    <h1>Meme-Gen</h1>
 
+    <header class="main-header">
+        <h1>Meme-Gen</h1>
+    </header>
 
     <section class="gallery-container">
-        <ul class="gallery-imgs clean-list">
+        <ul class="gallery-imgs clean-list flex">
         </ul>
     </section>
-
 
     <section class="editor-container hidden">
         <div>editor</div>
@@ -31,9 +32,9 @@
         
         <button class="add-line" title="add-line" onclick="onAddLine()">add-line</button>
         <button class="switch-line" title="switch-line" onclick="onSwitchLine()">switch-line</button>
+        <button class="back-btn" title="go-back" onclick="onBack()">Back</button>
 
-
-        <canvas width="500" height="500"></canvas>
+        <canvas width="500" height="500" onclick="onMouseMove(event)"></canvas>
 
         <a href="#" onclick="onDownloadCanvas(this)">Download</a>
     </section>

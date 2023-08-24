@@ -1,24 +1,21 @@
-* {
-    box-sizing: border-box;
+/* SETUP */
+/* @import url("setup/vars.css"); */
+/* @import url("setup/typography.css"); */
 
-    text-align: center;
-    margin: 3px auto;
-}
+/* BASICS  */
+@import url("basics/base.css");
+@import url("basics/helpers.css");
 
-.hidden {
-    display: none;
-}
+/* COMPONENTS */
+/* @import url("components/logo.css"); */
+@import url("components/header.css");
+@import url("components/gallery-container.css");
+/* @import url("components/editor-container.css"); */
+/* @import url("components/footer.css"); */
 
-.set-line {
-    display: block;
-}
+/* MEDIA QUERIES */
+/* @import url("setup/mq.css"); */
 
-.clean-list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
 
-canvas {
-    display: block;
-}
+
+

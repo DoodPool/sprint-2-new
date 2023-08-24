@@ -1,0 +1,7 @@
+.main-header {
+    width: 90vw;
+    height: 60px;
+    border-radius: 37px;
+    /* background-color: #5970c1-blue;| */
+    background: linear-gradient(to right, #5970c1, #21ac91);
+}

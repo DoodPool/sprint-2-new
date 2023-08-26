@@ -11,18 +11,7 @@
 }
 
 img {
-    display: flex;
     height: 170px;
     border-radius: 10px;
     cursor: pointer;
 }
-
-/* 
-border-radius: 2em;
-	display: inline-block;
-	height: 6rem;
-	position: relative;
-	width: 6rem;
-	margin: 2rem 1rem;
-	text-align: center;
-	vertical-align: middle; */

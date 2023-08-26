@@ -1,13 +1,11 @@
 .main-header {
-    display: grid;
-    grid-auto-flow: column;
-
+    display: flex;
     align-items: center;
 
     width: 90vw;
     height: 60px;
     border-radius: 35px;
-    
+
     background: linear-gradient(to right, #5970c1, #21ac91);
 }
 
@@ -26,6 +24,8 @@
 
     cursor: pointer;
     transition: .1s;
+
+    margin-inline-start: 300px;
 }
 
 .inPage {
@@ -35,3 +35,13 @@
     padding: 3px 17px;
     box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.15);
 }
+
+.menu-btn {
+    background-color: white;
+    color: #19a59f;
+    font-size: 1.4em;
+    border: none;
+    border-radius: 50%;
+    font-weight: 600;
+}
+

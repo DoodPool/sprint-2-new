@@ -1,0 +1,154 @@
+/* MOBILE ONLY */
+@media (max-width: 686px) {
+    .main-nav {
+        display: none;
+    }
+    
+    .menu-btn {
+        margin-inline-end: 30px;
+    }
+
+    .menu-open {
+        display: block;
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        margin: 0px;
+
+        height: 100vh;
+
+        background-color: rgba(156, 156, 156, 0.9);
+        flex-direction: column;
+        border-inline-start: 1px solid #666666;
+
+        width: clamp(200px, 30vw, 300px);
+
+        transition: box-shadow 0.6s;
+        z-index: 1;
+    }
+
+    .gallery-btn {
+        width: 100%;
+        font-size: 1.2em;
+        border: none;
+        color: black;
+
+        cursor: pointer;
+        transition: .1s;
+
+        border-radius: 0px;
+        margin: 0;
+        margin-block-end: 85vh;
+        padding: 3px 17px;
+    }
+
+    .inPage {
+        margin: 0;
+        background-color: white;
+        color: #21ac91;
+        padding: 3px 17px;
+        box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.15);
+        margin-block-end: 85vh;
+    }
+
+    .editor-container {
+        display: grid;
+        grid-auto-flow: row;
+    }
+
+    canvas {
+        height: 300px;
+    }
+
+    .set-line {
+        height: 45px;
+    }
+
+    .tools {
+        height: 120px;
+        align-self: center;
+    }
+    
+    .download {
+        height: 55px;
+    }
+
+    .tools-container {
+        height: 350px;
+        width: 450px;
+        margin-block-start: 20px;
+    }
+}
+
+/* SMALL */
+
+@media (min-width: 686px) {
+    .gallery-container {
+        grid-template-columns: 20px 1fr 20px;
+        grid-auto-flow: column;
+    }
+
+    .gallery-imgs {
+        grid-column: 2;
+        grid-template-columns: repeat(3, 150px);
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .close-btn {
+        display: none;
+    }
+
+    canvas {
+        height: 300px;
+    }
+}
+
+/* MEDIUM */
+@media (min-width: 920px) {
+    .gallery-container {
+        grid-template-columns: 40px 1fr 40px;
+        grid-auto-flow: column;
+    }
+
+    .gallery-imgs {
+        grid-column: 2;
+        grid-template-columns: repeat(4, 170px);
+    }
+
+    canvas {
+        height: 400px;
+    }
+
+    .gallery-btn {
+        margin-inline-start: 500px;
+    }
+
+}
+
+/* LARGE */
+@media (min-width: 1060px) {
+    .gallery-container {
+        grid-template-columns: 60px 1fr 60px;
+        grid-auto-flow: column;
+    }
+
+    .gallery-imgs {
+        grid-column: 2;
+        grid-template-columns: repeat(5, 190px);
+    }
+
+    .logo {
+        margin-inline-end: 300px;
+    }
+
+    canvas {
+        height: 500px;
+    }
+
+    .gallery-btn {
+        margin-inline-start: 300px;
+    }
+}

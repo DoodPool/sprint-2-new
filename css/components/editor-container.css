@@ -4,15 +4,14 @@
 }
 
 .tools-container {
-    grid-template-columns: minmax(100px, 170px) minmax(100px, 170px) minmax(100px, 170px);
+    grid-template-columns: repeat(3, minmax(100px, 170px));
     background-color: #383b42;
     border-radius: 20px;
-    
 }
 
 .tools {
     grid-column: 1/-1;
-    grid-template-columns: minmax(130px, 200px) minmax(130px, 200px);
+    grid-template-columns: repeat(2, minmax(130px, 200px));
     grid-auto-flow: row;
 
     align-items: center;
@@ -24,7 +23,6 @@
 
 .set-line {
     grid-column: 1/-1;
-    /* width: 400px; */
     padding: 20px 130px;
     align-self: center;
 
@@ -64,7 +62,6 @@ canvas {
 
 .add-line,
 .switch-line{
-    /* width: 120px; */
     height: 30px;
     box-shadow: 1px 4px 0 rgba(92, 92, 92, 0.55), inset 0 5px 0 rgba(255, 255, 255, 0.58);
     border-radius: 10px;
@@ -83,5 +80,4 @@ canvas {
     border-radius: 10px;
 
     font-size: 1.2em;
-
 }

@@ -12,8 +12,11 @@
 
     <header class="main-header">
         <h1 class="logo">Meme-Gen</h1>
-        <button class="btn gallery-btn inPage" onclick="onGallery()">Gallery</button>
-        <!-- <button class="btn gallery-btn">About</button> -->
+        <nav class="main-nav">
+            <button class="btn gallery-btn inPage" onclick="onGallery()">Gallery</button>
+            <button class="btn close-btn hidden" onclick="onCloseMenu()">Close</button>
+        </nav>
+        <button class="btn menu-btn hidden" onclick="onOpenMenu()" >☰</button>
     </header>
 
     <section class="gallery-container">
@@ -46,8 +49,9 @@
         
     </section>
 
+    <footer>Avishai Cohen</footer>
+
     <script src="js/services/util.service.js"></script>
-    <!-- <script src="js/main.js"></script> -->
     <script src="js/controllers/memeController.js"></script>
     <script src="js/services/memeService.js"></script>
     <script src="js/controllers/galleryController.js"></script>

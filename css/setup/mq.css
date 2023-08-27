@@ -3,7 +3,7 @@
     .main-nav {
         display: none;
     }
-    
+
     .menu-btn {
         margin-inline-end: 30px;
     }
@@ -17,7 +17,7 @@
 
         height: 100vh;
 
-        background-color: rgba(156, 156, 156, 0.9);
+        background-color: rgba(101, 101, 101, 0.9);
         flex-direction: column;
         border-inline-start: 1px solid #666666;
 
@@ -42,6 +42,11 @@
         padding: 3px 17px;
     }
 
+    .gallery-btn:hover {
+        background-color: rgba(76, 76, 76, 0.9);
+        color: white;
+    }
+
     .inPage {
         margin: 0;
         background-color: white;
@@ -52,7 +57,6 @@
     }
 
     .editor-container {
-        display: grid;
         grid-auto-flow: row;
     }
 
@@ -68,7 +72,7 @@
         height: 120px;
         align-self: center;
     }
-    
+
     .download {
         height: 55px;
     }
@@ -77,6 +81,21 @@
         height: 350px;
         width: 450px;
         margin-block-start: 20px;
+    }
+
+    .close-btn {
+        width: 100px;
+        height: 30px;
+        background-color: white;
+        color: #21ac91;
+        border: none;
+        border-radius: 5px;
+        transition: .2s;
+    }
+
+    .close-btn:hover {
+        background-color: rgba(76, 76, 76, 0.9);
+        color: white;
     }
 }
 

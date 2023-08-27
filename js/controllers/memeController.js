@@ -36,9 +36,9 @@ function renderMeme() {
     const x = gFrameWidth / 2
     const y = gCanvas.height - 50
 
-    console.log(text)
-    console.log(x)
-    console.log(y)
+    // console.log(text)
+    // console.log(x)
+    // console.log(y)
 
     drawText(text, x, y, meme, 1)
 }
@@ -50,12 +50,27 @@ function drawText(text, x, y, meme, memeId) {
     gCtx.fillStyle = meme.lines[memeId].color
     gCtx.font = `${meme.lines[memeId].size}px Impact`
 
-    gCtx.textAlign = 'center'
+    gCtx.textAlign = meme.lines[memeId].align
     gCtx.textBaseline = 'middle'
 
     gCtx.fillText(text, x, y)
     gCtx.strokeText(text, x, y)
 }
+
+
+
+// function drawText(text, x, y, lineIdx) {
+//     gCtx.lineWidth = 1
+//     gCtx.strokeStyle = gMeme.lines[lineIdx].stroke
+//     gCtx.fillStyle = gMeme.lines[lineIdx].color
+//     gCtx.font = `${gMeme.lines[lineIdx].size}px ${gMeme.lines[lineIdx].font}`
+//     gCtx.textAlign = gMeme.lines[lineIdx].align
+//     gCtx.textBaseline = 'middle'
+
+//     gCtx.fillText(text, x, y)
+//     gCtx.strokeText(text, x, y)
+//     gMeme.lines[lineIdx].pos = { x, y }
+// }
 
 function onSetLineTxt(memeLine) {
     setLineTxt(memeLine)
@@ -70,6 +85,7 @@ function onSetColor(lineColor) {
 function onImgSelect(elImg) {
     setImg(elImg)
     handleClassEl('hidden', '.editor-container', false)
+    handleClassEl('grid', '.editor-container', true)
     handleClassEl('flex', '.editor-container', true)
     handleClassEl('hidden', '.gallery-container', true)
     handleClassEl('inPage', '.gallery-btn', false)
@@ -78,6 +94,7 @@ function onImgSelect(elImg) {
 
 function onGallery() {
     handleClassEl('hidden', '.editor-container', true)
+    handleClassEl('grid', '.editor-container', false)
     handleClassEl('flex', '.editor-container', false)
     handleClassEl('hidden', '.gallery-container', false)
     handleClassEl('inPage', '.gallery-btn', true)
@@ -101,14 +118,7 @@ function onChangeSize(diff) {
 }
 
 function onAddLine() {
-    gMeme.lines.push({
-        txt: 'And it\'s been 4 hours',
-        size: 30,
-        color: 'white',
-        x: 10,
-        y: gCanvas.height - 80,
-
-    })
+    addLine()
     switchLine()
     renderMeme()
 }
@@ -137,3 +147,9 @@ function onMouseMove(ev) {
     if (offsetY >= gCanvas.height - 80 && offsetY <= gCanvas.height - 20 && gMeme.selectedLineIdx === 0) onSwitchLine()
 }
 
+function onAlign(direction) {
+    if (!direction) return
+    gMeme.lines[gMeme.selectedLineIdx].align = direction
+    // console.log('gMeme', gMeme)
+    renderMeme()
+}

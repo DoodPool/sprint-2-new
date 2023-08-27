@@ -16,7 +16,7 @@
             <button class="btn gallery-btn inPage" onclick="onGallery()">Gallery</button>
             <button class="btn close-btn hidden" onclick="onCloseMenu()">Close</button>
         </nav>
-        <button class="btn menu-btn hidden" onclick="onOpenMenu()" >☰</button>
+        <button class="btn menu-btn" onclick="onOpenMenu()" >☰</button>
     </header>
 
     <section class="gallery-container">
@@ -34,9 +34,13 @@
             <div class="tools grid">
                 <input class="set-color" type="color" class="set-color" oninput="onSetColor(this.value)">
                 <div class="font-size">
-                    <button class="btn decrease" title="decrease-size" onclick="onChangeSize(-3)">-</button>
+                    <button class="btn decrease" title="decrease-size" onclick="onChangeSize(-3)">A-</button>
                     
-                    <button class="btn increase" title="increase-size" onclick="onChangeSize(3)">+</button>
+                    <button class="btn increase" title="increase-size" onclick="onChangeSize(3)">A+</button>
+
+                    <!-- <button onclick="onAlign('end')" class="btn">end</button>
+                    <button onclick="onAlign('center')" class="btn">center</button>
+                    <button onclick="onAlign('start')" class="btn">start</button> -->
                 </div>
                 
                 <button class="btn add-line" title="add-line" onclick="onAddLine()">add-line</button>
